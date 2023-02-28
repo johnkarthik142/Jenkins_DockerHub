@@ -1,8 +1,4 @@
-pipeline {
-  
-  environment {
-    DOKERHUB_CREDENTIALS = credentials('jenkins_dockerhub_JK')
-  }
+
   stages {
     stage('Build') {
       steps {
@@ -22,10 +18,10 @@ pipeline {
         
       }
     }
-  }
+  
   post{
     always {
       sh 'docker logout'
     }
   }
-}
+
