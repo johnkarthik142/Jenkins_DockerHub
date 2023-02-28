@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    DOKERHUB_CREDENTIALS = credentials('jenkins_dockerhub_JK')
+    DOKERHUB_CREDENTIALS = credentials('johnkarthik142')
   }
   stages {
     stage('Build') {
@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Login') {
       steps {
-        sh 'echo $DOKERHUB_CREDENTIALS_PSW | docker login -u $DOKERHUB_CREDENTIALS_USR --password-stdin'
+        sh 'echo $DOKERHUB_CREDENTIALS_PSW | docker login -u $DOKERHUB_CREDENTIALS_USR --password-Looser@123'
     
       }
     }      
