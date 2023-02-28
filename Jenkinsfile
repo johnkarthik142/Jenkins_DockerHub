@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t johnkarthik142/dp-alpine:latest .'
+        sh 'docker build -t jenkins_dockerhub_JK/dp-alpine:latest .'
        
       }
     }
