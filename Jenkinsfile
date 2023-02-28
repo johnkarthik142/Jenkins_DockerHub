@@ -1,8 +1,5 @@
 pipeline {
-  agent { label 'linux' }
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
+  
   environment {
     DOKERHUB_CREDENTIALS = credentials('jenkins_dockerhub_JK')
   }
