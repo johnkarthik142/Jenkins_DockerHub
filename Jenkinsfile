@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    DOKERHUB_CREDENTIALS = credentials('johnkarthik142')
+    DOKERHUB_CREDENTIALS_USR = credentials('johnkarthik142')
   }
   stages {
     stage('Build') {
@@ -26,11 +26,11 @@ pipeline {
       }
     }
    
-  post{
-    always {
+    post{
+     always {
       sh 'docker logout'
-    }
-  }
+      }
+   }
  }
 
 
