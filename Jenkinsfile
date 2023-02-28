@@ -18,7 +18,7 @@
         
       }
     }
-  
+  }
   post{
     always {
       sh 'docker logout'
