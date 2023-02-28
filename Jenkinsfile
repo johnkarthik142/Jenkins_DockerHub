@@ -5,6 +5,7 @@ pipeline {
   }
   environment {
     DOKERHUB_CREDENTIALS = credentials('johnkarthik142')
+    DOKERHUB_CREDENTIALS_PSW = 
   }
   stages {
     stage('Build') {
@@ -15,7 +16,7 @@ pipeline {
     }
     stage('Login') {
       steps {
-       docker login --username johnkarthik142 --password-Looser@123
+       sh 'docker login -u $DOKERHUB_CREDENTIALS_USR --password-Looser@123'
     
       }
     }      
