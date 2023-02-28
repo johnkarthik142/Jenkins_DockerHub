@@ -5,7 +5,6 @@ pipeline {
   }
   environment {
     DOKERHUB_CREDENTIALS = credentials('johnkarthik142')
-    DOKERHUB_CREDENTIALS_PSW = 
   }
   stages {
     stage('Build') {
