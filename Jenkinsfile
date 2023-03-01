@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t jenkins/dp-alpine:latest .'
+        sh 'docker build -t johnkarthik142/images_docker:latest .'
        
       }
     }
@@ -21,7 +21,7 @@ pipeline {
     }      
     stage('Push') {
       steps {
-        sh 'docker push johnkarthik142/dp-alpine:latest'
+        sh 'docker push johnkarthik142/images_docker:latest'
         
       }
     }
